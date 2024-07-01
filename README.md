@@ -1,4 +1,4 @@
-[conexao-bd-mysql.txt](https://github.com/user-attachments/files/16050621/conexao-bd-mysql.txt)**Projeto Repositório**
+**Projeto Repositório**
 No projeto, segui os requisitos principais fornecidos, buscando atender todas as demandas da melhor maneira possível. Comecei com uma análise detalhada do projeto e criei um diagrama UML para visualizar todas as entidades e seus relacionamentos no meu repositório. Este diagrama foi fundamental para entender a estrutura lógica do site.
 
 
@@ -16,8 +16,7 @@ Link para o projeto no Figma: [Figma](https://www.figma.com/design/E6kUeZ7GyIeu1
 Optei por utilizar MySQL para o banco de dados devido à minha familiaridade prévia. Implementei o front-end e back-end seguindo os padrões MVC e DDD com Razor, visando uma estrutura compacta e organizada. O banco de dados foi hospedado diretamente no AWS RDS, uma plataforma com a qual tenho experiência prévia. Segue a connection do banco de dados:
 
 
-[U"BancoDeDadosConexao": "Server=kria-repository.crqamw46owxk.us-east-2.rds.amazonaws.com;Database=dbRepository;Uid=admin;Pwd=testekria002113"
-ploading conexao-bd-mysql.txt…]()
+[conexao-bd-mysql.txt](https://github.com/user-attachments/files/16050621/conexao-bd-mysql.txt)
 
 
 Agradeço pela oportunidade de demonstrar parte do meu conhecimento neste projeto. Estou ansiosa para continuar aprendendo e crescer profissionalmente, e esta oportunidade seria um marco significativo nesse processo, tanto para meu desenvolvimento pessoal quanto para contribuir futuramente. Mais uma vez, agradeço pelo tempo e consideração dedicados. 😊
