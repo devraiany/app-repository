@@ -1,7 +1,8 @@
 [conexao-bd-mysql.txt](https://github.com/user-attachments/files/16050621/conexao-bd-mysql.txt)**Projeto Repositório**
 No projeto, segui os requisitos principais fornecidos, buscando atender todas as demandas da melhor maneira possível. Comecei com uma análise detalhada do projeto e criei um diagrama UML para visualizar todas as entidades e seus relacionamentos no meu repositório. Este diagrama foi fundamental para entender a estrutura lógica do site.
 
-![WhatsApp Image 2024-07-01 at 06 07 55](https://github.com/annybuch/app-repository/assets/132410900/3e775288-629a-41a3-919f-6bf291467cea)
+
+![WhatsApp Image 2024-07-01 at 06 15 39](https://github.com/annybuch/app-repository/assets/132410900/fd078fd5-2e0e-40c1-b274-0335067e3393)
 
 
 Em seguida, passei para o design das telas usando o Figma para traduzir minhas ideias em interfaces concretas. Desenvolvi um total de 8 telas: uma para login, outra para cadastro de usuários - a tela inicial (home) onde todos os repositórios cadastrados pelo usuário são exibidos, permitindo clicar para mais detalhes, uma tela para cadastrar novos repositórios e uma para edição, acessível através dos detalhes de cada repositório.
