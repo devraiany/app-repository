@@ -21,4 +21,10 @@ Optei por utilizar MySQL para o banco de dados devido à minha familiaridade pr�
 [conexao-bd-mysql.txt](https://github.com/user-attachments/files/16050621/conexao-bd-mysql.txt)
 
 
+Ao rodar o projeto, poderá fazer login utilizando a seguinte conta:<br>
+email: teste@admin.com<br>
+senha: 123<br>
+Mas fique a vontade pra cadastrar uma nova conta se preferir!
+
+
 Agradeço pela oportunidade de demonstrar parte do meu conhecimento neste projeto. Estou ansiosa para continuar aprendendo e crescer profissionalmente, e esta oportunidade seria um marco significativo nesse processo, tanto para meu desenvolvimento pessoal quanto para contribuir futuramente. Mais uma vez, agradeço pelo tempo e consideração dedicados. 😊
