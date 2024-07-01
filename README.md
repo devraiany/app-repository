@@ -1,4 +1,6 @@
 **Projeto Repositório**
+
+
 No projeto, segui os requisitos principais fornecidos, buscando atender todas as demandas da melhor maneira possível. Comecei com uma análise detalhada do projeto e criei um diagrama UML para visualizar todas as entidades e seus relacionamentos no meu repositório. Este diagrama foi fundamental para entender a estrutura lógica do site.
 
 
