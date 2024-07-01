@@ -5,6 +5,7 @@ using App.Repository.Models.Repositorio;
 using App.Repository.Services.Auth;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace App.Repository.Services.Repositorios
 {
@@ -79,6 +80,9 @@ namespace App.Repository.Services.Repositorios
             var usuario = await _context.Usuarios
                 .FirstOrDefaultAsync(u => u.Id == usuarioId);
 
+            // -- Define o fuso horário para o Brasil (Horário de Brasília)
+            var timeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
+
             // -- Mapeia para RepositorioModel incluindo informações do usuário.
             var repositoriosModel = repositorios.Select(r => new RepositorioModel
             {
@@ -86,7 +90,7 @@ namespace App.Repository.Services.Repositorios
                 Nome = r.Nome,
                 Descricao = r.Descricao,
                 Linguagem = r.Linguagem,
-                UltimaAlteracao = r.SysDateUpdate,
+                UltimaAlteracao = TimeZoneInfo.ConvertTimeFromUtc(r.SysDateUpdate, timeZoneInfo),
                 Usuario = new UsuarioModel
                 {
                     Id = usuario.Id,
@@ -115,6 +119,9 @@ namespace App.Repository.Services.Repositorios
                 .FirstOrDefaultAsync(u => u.Id == usuarioId)
                 ?? throw new Exception("Usuário não encontrado.");
 
+            // -- Define o fuso horário para o Brasil (Horário de Brasília)
+            var timeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
+
             // -- Mapeia para RepositorioModel incluindo informações do usuário.
             var repositorioModel = new RepositorioModel
             {
@@ -122,7 +129,7 @@ namespace App.Repository.Services.Repositorios
                 Nome = repositorio.Nome,
                 Descricao = repositorio.Descricao,
                 Linguagem = repositorio.Linguagem,
-                UltimaAlteracao = repositorio.SysDateUpdate,
+                UltimaAlteracao = TimeZoneInfo.ConvertTimeFromUtc(repositorio.SysDateUpdate, timeZoneInfo),
                 Usuario = new UsuarioModel
                 {
                     Id = usuario.Id,
@@ -159,6 +166,9 @@ namespace App.Repository.Services.Repositorios
                 .FirstOrDefaultAsync(u => u.Id == usuarioId)
                 ?? throw new Exception("Usuário não encontrado.");
 
+            // -- Define o fuso horário para o Brasil (Horário de Brasília)
+            var timeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
+
             // -- Mapeia para RepositorioModel incluindo informações do usuário.
             var repositoriosModel = repositorios.Select(r => new RepositorioModel
             {
@@ -166,7 +176,7 @@ namespace App.Repository.Services.Repositorios
                 Nome = r.Nome,
                 Descricao = r.Descricao,
                 Linguagem = r.Linguagem,
-                UltimaAlteracao = r.SysDateUpdate,
+                UltimaAlteracao = TimeZoneInfo.ConvertTimeFromUtc(r.SysDateUpdate, timeZoneInfo),
                 Usuario = new UsuarioModel
                 {
                     Id = usuario.Id,
