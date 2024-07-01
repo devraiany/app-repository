@@ -1,7 +1,7 @@
 **Projeto Repositório**
 
 
-No projeto, segui os requisitos principais fornecidos, buscando atender todas as demandas da melhor maneira possível. Comecei com uma análise detalhada do projeto e criei um diagrama UML para visualizar todas as entidades e seus relacionamentos no meu repositório. Este diagrama foi fundamental para entender a estrutura lógica do site.
+No projeto, segui os requisitos principais fornecidos, buscando atender todas as demandas da melhor maneira possível. Comecei com uma análise do projeto e criei um diagrama UML para visualizar todas as entidades e seus relacionamentos no meu repositório. Este diagrama foi fundamental para entender a estrutura lógica do site.
 
 
 ![WhatsApp Image 2024-07-01 at 06 15 39](https://github.com/annybuch/app-repository/assets/132410900/fd078fd5-2e0e-40c1-b274-0335067e3393)
