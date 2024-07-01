@@ -1,0 +1,48 @@
+﻿@using App.Repository.Views.Auth;
+@{
+    Layout = "~/Views/Shared/Index.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/login/login.css" />
+<link rel="stylesheet" href="~/css/inputs/inputs.css" />
+<link rel="stylesheet" href="~/css/buttons/buttons.css" />
+
+@model LoginViewModel;
+
+<div class="container">
+
+    <div class="container-lado-esquerdo">
+        <!-- Nome do Projeto -->
+        <div class="repository">REPOSITORY</div>
+    </div>
+
+    <div class="container-lado-direto">
+        <form method="post" class="container-formulario">
+
+            <!-- Titulo -->
+            <div class="titulo">
+                Sign-in
+                <span class="text-logo">Repository</span>
+            </div>
+
+            <!-- Informações do usuário a serem validadas para realizar o login -->
+            <input class="textfield-solid" name="AuthModel.Email" placeholder="Email" />
+            @Html.ValidationMessageFor(modelItem => modelItem.AuthModel.Email)
+
+            <input class="textfield-solid" name="AuthModel.Senha" placeholder="Senha" type="password" />
+            @Html.ValidationMessageFor(modelItem => modelItem.AuthModel.Senha)
+            
+            @* Mensagem de Erro caso haja *@
+            @ViewBag.Error
+
+            <!-- Botão para enviar as informações -->
+            <button class="button-solid" type="submit">Login</button>
+
+            <!-- Caso o usuário não tenha uma conta cadastrada -->
+            <div class="cadastrar-conta">
+                Não possui conta?
+                <a class="cadastrar" href="/auth/cadastro"> Cadastre-se</a>
+            </div>
+        </form>
+    </div>
+</div>

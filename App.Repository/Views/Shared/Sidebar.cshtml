@@ -1,0 +1,45 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+    string url = Context.Request.Path;
+}
+
+<link rel="stylesheet" href="~/css/sidebar/sidebar.css" />
+<link rel="stylesheet" href="~/css/default/default.css" />
+
+<div class="sidebar-container">
+
+    <div class="sidebar-head">
+        <div class="text-logo">Repository</div>
+    </div>
+
+    <div class="sidebar-itens">
+
+        <a class="sidebar-option @(url == "/home/landing" ? "active" : "")"
+            href="/home/landing">
+            Home
+        </a>
+
+        <a class="sidebar-option @(url == "/repository/meus-repos" ? "active" : "")"
+            href="/repository/meus-repositorios">
+            Meus Repositórios
+        </a>
+
+        <a class="sidebar-option @(url == "/repository/favoritos" ? "active" : "")"
+            href="/home/favoritos">
+            Meus Favoritos
+        </a>
+
+        <a class="sidebar-option @(url == "/repository/novo-repositorio" ? "active" : "")"
+            href="/repository/novo-repositorio">
+            Novo repositório
+        </a>
+
+    </div>
+
+    <div class="sidebar-footer">
+        <div class="sidebar-option @(url == "/auth/login" ? "active" : "")"
+             href="/auth/login">
+            Sign-Out
+        </div>
+    </div>
+</div>

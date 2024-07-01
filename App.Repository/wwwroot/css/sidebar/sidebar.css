@@ -1,0 +1,39 @@
+﻿.sidebar-container {
+    width: 20%;
+    height: 100%;
+    background-color: #FFE0D6;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    gap: 210px;
+    overflow: auto;
+
+    overflow-x: hidden;
+}
+
+.sidebar-itens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.sidebar-option {
+    font-weight: 600;
+    color: #444444;
+    cursor: pointer;
+    transition: ease-in-out .22s;
+    text-decoration: none !important;
+}
+
+.sidebar-option:hover {
+    color: #FC4B08;
+}
+
+.active {
+    color: #FC4B08;
+}

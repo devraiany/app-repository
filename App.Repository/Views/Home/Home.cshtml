@@ -1,0 +1,59 @@
+﻿@using App.Repository.Views.Home;
+@{
+    Layout = "~/Views/Shared/Index.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/home/home.css" />
+<link rel="stylesheet" href="~/css/inputs/inputs.css" />
+<link rel="stylesheet" href="~/css/buttons/buttons.css" />
+
+@model HomeViewModel;
+
+<div class="container">
+    <div class="page">
+
+        @{
+            // -- Aqui estou renderizando a navbar
+            await Html.RenderPartialAsync("Topbar");
+        }
+
+        <div class="content">
+
+            <!--  Titulo da página -->
+            <div class="titulo-ola">
+                Olá! Seja Bem-Vindo(a)
+            </div>
+            <div class="titulo">
+                Repositórios de @ViewData["Usuario"]
+            </div>
+
+            <!--  Aqui ele irá percorrer cada repositório e obter suas informações -->
+            <div class="repositorios">
+                @{
+                    foreach (var repo in Model.Repositorios)
+                    {
+                        <div class="repositorio-card">
+                            <div class="repositorio-data">
+                                @repo.UltimaAlteracao
+                            </div>
+                            <div class="repositorio-titulo">
+                                @repo.Nome
+                            </div>
+                            <div class="repositorio-desc">
+                                @repo.Descricao
+                            </div>
+                            <a class="repositorio-button"
+                               href="/repository/repositorios/@repo.Id">Ver mais</a>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+
+        @{
+            // -- Aqui estou renderizando o footer
+            await Html.RenderPartialAsync("Footer");
+        }
+
+    </div>
+</div>

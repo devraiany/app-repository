@@ -1,0 +1,53 @@
+﻿@using App.Repository.Views.Cadastro;
+@{
+    Layout = "~/Views/Shared/Index.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/cadastro/cadastro.css" />
+<link rel="stylesheet" href="~/css/inputs/inputs.css" />
+<link rel="stylesheet" href="~/css/buttons/buttons.css" />
+
+@model CadastroViewModel;
+
+<div class="container">
+
+    <div class="container-lado-esquerdo">
+
+        <!-- Nome do projeto -->
+        <div class="repository">REPOSITORY</div>
+    </div>
+
+    <div class="container-lado-direto">
+
+        <form method="post" class="container-formulario">
+
+            <!-- Titulo -->
+            <div class="titulo">
+                Signup
+                <span class="text-logo">Repository</span>
+            </div>
+
+            <!-- Informações para o cadastro do usuário -->
+            <input class="textfield-solid" name="UsuarioModel.Nome" placeholder="Nome" />
+            <input class="textfield-solid" name="UsuarioModel.Sobrenome" placeholder="Sobrenome" />
+            <input class="textfield-solid" name="UsuarioModel.Email" placeholder="Email" />
+            <input class="textfield-solid" name="UsuarioModel.Senha" placeholder="Senha" type="password" />
+
+            <!-- Botão para finalizar o cadastro -->
+            <button class="button-solid" type="submit">Login</button>
+
+            <!-- Caso o usuário já possua conta -->
+            <div class="conta-existente">
+                Já possui conta?
+                <a class="entrar" href="/auth/login">Entrar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

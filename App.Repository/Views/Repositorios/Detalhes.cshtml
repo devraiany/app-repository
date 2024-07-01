@@ -1,0 +1,78 @@
+﻿@using App.Repository.Views.Repositorios;
+@{
+    Layout = "~/Views/Shared/Index.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/home/home.css" />
+<link rel="stylesheet" href="~/css/inputs/inputs.css" />
+<link rel="stylesheet" href="~/css/buttons/buttons.css" />
+<link rel="stylesheet" href="~/css/repositorios/repositorios.css" />
+
+@model DetalhesRepositorioViewModel;
+
+<div class="container">
+    <div class="page">
+
+        <div class="repository-page">
+            @{
+                // -- Aqui estou renderizando a Sidebar
+                await Html.RenderPartialAsync("Sidebar");
+            }
+
+            <form class="form-wrapper" method="post">
+                <div class="title">
+                    @Model?.Repositorio?.Nome
+                </div>
+
+                <div class="card-wrapper">
+
+                    <a class="card-button" href="/repository/editar/@Model?.Repositorio?.Id">Editar</a>
+                    <a class="card-button-delete" href="/repository/delete/@Model?.Repositorio?.Id">Deletar</a>
+
+                    <a class="card-button-star" href="/repository/favoritar/@Model?.Repositorio?.Id">Favoritar</a>
+
+                    <div class="name-tag">
+                        Publicado por @Model?.Repositorio?.Usuario?.Nome @Model?.Repositorio?.Usuario?.Sobrenome
+                    </div>
+                    <div class="card-container">
+                        <div class="card-row border-bottom">
+                            Data da última alteração: @Model?.Repositorio?.UltimaAlteracao
+                        </div>
+                        <div class="card-row border-bottom">
+                            <div class="card-column">
+                                <div class="card-label">Nome</div>
+                                <div class="card-text">
+                                    @Model?.Repositorio?.Nome
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-row border-bottom">
+                            <div class="card-column">
+                                <div class="card-label">Descrição</div>
+                                <div class="card-desc">
+                                    @Model?.Repositorio?.Descricao
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-row border-bottom">
+                            <div class="card-column">
+                                <div class="card-label">Linguagem</div>
+                                <div class="card-desc">
+                                    @Model?.Repositorio?.Linguagem
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-row">
+                            <div class="card-column">
+                                <div class="card-label">Dono do repositório</div>
+                                <div class="card-desc">
+                                    @Model?.Repositorio?.Usuario?.Nome @Model?.Repositorio?.Usuario?.Sobrenome
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

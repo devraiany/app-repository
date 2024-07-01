@@ -1,0 +1,62 @@
+﻿/* Login.css */
+
+.container-lado-esquerdo {
+    flex: 1;
+    background-image: url("../../img/codigo.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.repository {
+    font-family: 'Orbitron' !important;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgba(255, 244, 241, 1);
+    text-transform: uppercase;
+    position: fixed;
+    left: 40px;
+    bottom: 40px;
+}
+
+.container-lado-direto {
+    flex: .8;
+    background-color: rgba(255, 244, 241, 1);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 65%;
+    justify-content: center;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 38px;
+    color: rgba(99, 99, 99, 1);
+    font-weight: 600;
+    margin-bottom: 80px;
+    letter-spacing: 5px;
+}
+
+.cadastrar-conta {
+    text-align: center;
+}
+
+.cadastrar {
+    color: rgb(28, 28, 28);
+    font-weight: 600;
+    cursor: pointer;
+    transition: ease-in-out 0.22s;
+}
+
+.cadastrar:hover {
+    color: rgba(252, 75, 8, 1);
+    border: none;
+}

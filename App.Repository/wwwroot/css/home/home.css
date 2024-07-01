@@ -1,0 +1,109 @@
+﻿/* home.css */
+
+.page {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 244, 241, 1);
+    background-image: url("../../img/gradient1.png"), url("../../img/gradient2.png"), url("../../img/gradient3.png");
+    background-position: left, center, right;
+    background-repeat: no-repeat;
+    background-size: 20%, 60%, 20%;
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.titulo-ola {
+    font-size: 38px;
+    color: rgba(99, 99, 99, 1);
+    font-weight: 600;
+    text-align: left !important;
+    margin-bottom: 20px;
+}
+
+.titulo {
+    font-size: 38px;
+    color: rgb(23, 23, 23);
+    font-weight: 600;
+    text-align: left !important;
+    margin-bottom: 20px;
+}
+
+.repositorios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    height: 100%;
+    padding-top: 22px;
+}
+
+.repositorio-card {
+    background-color: rgba(0, 0, 0, .1);
+    width: 450px;
+    height: 235px;
+    border-radius: 20px;
+    display: flex;
+    padding: 35px;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding-top: 30px;
+    gap: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.repositorio-data {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.repositorio-titulo {
+    font-size: 22px;
+    letter-spacing: normal;
+    font-weight: 600;
+}
+
+.repositorio-desc {
+    font-size: 12px;
+    line-height: 125%;
+    letter-spacing: normal;
+    margin-bottom: 25px;
+}
+
+.repositorio-button {
+    width: fit-content;
+    height: 24px;
+    background-color: #FC4B08;
+    position: absolute;
+    bottom: 35px;
+    letter-spacing: normal;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    text-decoration: none !important;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    transition: ease-in-out .22s;
+}
+
+    .repositorio-button:hover {
+        color: #FC4B08;
+        background-color: white;
+    }

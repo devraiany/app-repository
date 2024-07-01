@@ -1,0 +1,54 @@
+﻿@using App.Repository.Views.Favoritos;
+@{
+    Layout = "~/Views/Shared/Index.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/home/home.css" />
+<link rel="stylesheet" href="~/css/inputs/inputs.css" />
+<link rel="stylesheet" href="~/css/buttons/buttons.css" />
+<link rel="stylesheet" href="~/css/favoritos/favoritos.css" />
+
+@model FavoritoViewModel;
+
+<div class="container">
+    <div class="page">
+
+        @{
+            // -- Aqui estou renderizando a navbar
+            await Html.RenderPartialAsync("Topbar");
+        }
+
+        <main class="main-content">
+
+            <!-- Titulo da página -->
+            <h1>Meus Favoritos</h1>
+
+            <!-- Aqui irá percorrer em cada repositório para listar com seu nome e data. -->
+            <table class="repositories">
+                <tbody>
+
+                    <!-- Aqui está percorrendo cada repositório para pegar suas devidas informações -->
+                    @foreach (var repo in Model.Repositorios)
+                    {
+                        <tr>
+                            <!-- Informações necessárias para a listagem (nome e última data de alteração) -->
+                            <td>@repo.Nome</td>
+                            <td>@repo.UltimaAlteracao.ToString("dd/MM/yyyy")</td>
+
+                            <!-- Imagem para representar os "Favoritos" -->
+                            <td> <a class="favorito"><img src="~/img/favorito-icon.png" alt="Favorito"></a></td>
+
+                            <!-- Botão de remover dos favoritos -->
+                            <td><a href="/home/favoritos/@repo.Id/remover">Remover favorito</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </main>
+
+        @{
+            // -- Aqui estou renderizando o footer
+            await Html.RenderPartialAsync("Footer");
+        }
+    </div>
+</div>

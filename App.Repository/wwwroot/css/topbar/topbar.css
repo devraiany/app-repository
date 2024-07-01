@@ -1,0 +1,38 @@
+﻿.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 224, 214, 1);
+    padding: 40px 100px;
+}
+
+.logo {
+    font-family: 'Orbitron' !important;
+    font-size: 20px;
+    font-weight: 900;
+    color: rgba(252, 75, 8, 1);
+    text-transform: uppercase;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: rgba(68, 68, 68, 1);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 5px;
+    letter-spacing: 1px;
+}
+
+    .menu a:hover {
+        color: rgba(252, 75, 8, 1);
+    }

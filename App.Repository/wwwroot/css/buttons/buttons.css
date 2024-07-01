@@ -1,0 +1,20 @@
+﻿.button-solid {
+    background-color: rgba(252, 75, 8, 1);
+    width: 100%;
+    height: 55px;
+    border-radius: 100px;
+    border: none;
+    font-size: 18px;
+    font-family: 'DM Sans';
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: ease-in-out 0.22s;
+}
+
+.button-solid:hover {
+    background-color: white;
+    color: rgba(252, 75, 8, 1);
+    border: solid 1px rgba(252, 75, 8, 1);
+}

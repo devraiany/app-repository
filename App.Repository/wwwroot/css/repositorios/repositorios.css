@@ -1,0 +1,234 @@
+﻿/* repositorios.css */
+
+.repository-page {
+    height: 100%;
+    flex: 1;
+    display: flex;
+}
+
+.form-wrapper {
+    flex: 1;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 44px;
+    color: #595655;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, .1);
+    width: 90%;
+    height: 90%;
+    border-radius: 50px;
+    padding: 40px;
+    padding-left: 200px;
+    padding-right: 200px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow: auto;
+    justify-content: center;
+}
+
+.submit-wrapper {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+
+.card-container {
+    background-color: rgba(0, 0, 0, .1);
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow: auto;
+    border-top-left-radius: 0px;
+    padding-top: 35px;
+}
+
+.card-wrapper {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card-row {
+    height: fit-content;
+    max-height: 300px;
+    overflow: auto;
+    padding-left: 75px;
+    padding-bottom: 35px;
+    letter-spacing: normal;
+    font-size: 20px;
+    display: flex;
+}
+
+.card-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+}
+
+.border-top {
+    border-top: 2px solid #CCC3C1;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #CCC3C1;
+}
+
+.name-tag {
+    background-color: #FFBAA4;
+    height: 55px;
+    width: 350px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: normal;
+}
+
+.card-label {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: normal;
+}
+
+.card-text {
+    font-size: 28px;
+    letter-spacing: normal;
+    color: #373534;
+    font-weight: 600;
+}
+
+.card-desc {
+    font-size: 16px;
+    letter-spacing: normal;
+    color: #373534;
+    font-weight: 500;
+}
+
+.card-button {
+    width: fit-content;
+    height: 24px;
+    background-color: #FC4B08;
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    letter-spacing: normal;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    text-decoration: none !important;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    transition: ease-in-out .22s;
+}
+
+    .card-button:hover {
+        color: #FC4B08;
+        background-color: white;
+    }
+
+.card-button-delete {
+    width: fit-content;
+    height: 24px;
+    background-color: darkred;
+    position: absolute;
+    bottom: 35px;
+    right: 135px;
+    letter-spacing: normal;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    text-decoration: none !important;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    transition: ease-in-out .22s;
+}
+
+.card-button-delete {
+    width: fit-content;
+    height: 24px;
+    background-color: darkred;
+    position: absolute;
+    bottom: 35px;
+    right: 135px;
+    letter-spacing: normal;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    text-decoration: none !important;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    transition: ease-in-out .22s;
+}
+
+.card-button-star {
+    width: fit-content;
+    height: 24px;
+    background-color: rgba(255, 168, 0, 1);
+    position: absolute;
+    top: 75px;
+    right: 35px;
+    letter-spacing: normal;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    text-decoration: none !important;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    transition: ease-in-out .22s;
+}

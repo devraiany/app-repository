@@ -1,0 +1,63 @@
+﻿@using App.Repository.Views.Home;
+@{
+    Layout = "~/Views/Shared/Index.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/home/home.css" />
+<link rel="stylesheet" href="~/css/inputs/inputs.css" />
+<link rel="stylesheet" href="~/css/buttons/buttons.css" />
+<link rel="stylesheet" href="~/css/repositorios/meus-repositorios.css" />
+
+@model MeusRepositoriosViewModel;
+
+<div class="container">
+    <div class="page">
+
+        @{
+            // -- Aqui estou renderizando a navbar
+            await Html.RenderPartialAsync("Topbar");
+        }
+
+        <main class="main-content">
+            <h1>Meus Repositórios</h1>
+            <div class="actions">
+
+                <!-- Seção para pesquisar repositório por nome -->
+                <form method="get">
+                    <input type="search" name="query" placeholder="Buscar..." class="search">
+                    <button class="btn todos">Pesquisar</button>
+                </form>
+            
+                <!-- Botões -->
+                <a class="btn new-repo" href="/repository/novo-repositorio">NOVO REPOSITÓRIO</a>
+                <a class="btn deletar-todos" href="/repository/deletar-todos">Deletar todos</a>
+            </div>
+
+            <table class="repositories">
+                <tbody>
+
+                    <!-- Aqui está percorrendo cada repositório para pegar suas devidas informações -->
+                    @foreach (var repo in Model.Repositorios)
+                    {
+                        <tr>
+                            <!--  Obtendo nome e a data do repositório -->
+                            <td>@repo.Nome</td>
+                            <td>@repo.UltimaAlteracao.ToString("dd/MM/yyyy")</td>
+
+                            <!-- Botões individuais de deletar e de ver detalhes do repositório -->
+                            <td class="button-group">
+                                <a class="delete" href="/repository/delete/@repo.Id">Deletar</a>
+                                <a class="ver-mais" href="/repository/repositorios/@repo.Id">Ver mais</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </main>
+
+        @{
+            // -- Aqui estou renderizando o footer
+            await Html.RenderPartialAsync("Footer");
+        }
+    </div>
+</div>

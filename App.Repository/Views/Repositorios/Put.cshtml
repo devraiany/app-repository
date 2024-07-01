@@ -1,0 +1,72 @@
+﻿@using App.Repository.Views.Repositorios;
+@{
+    Layout = "~/Views/Shared/Index.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/home/home.css" />
+<link rel="stylesheet" href="~/css/inputs/inputs.css" />
+<link rel="stylesheet" href="~/css/buttons/buttons.css" />
+<link rel="stylesheet" href="~/css/repositorios/repositorios.css" />
+
+@model PutRepositorioViewModel;
+
+<div class="container">
+
+    <div class="repository-page">
+
+        @{
+            // -- Aqui estou renderizando a Sidebar
+            await Html.RenderPartialAsync("Sidebar");
+        }
+
+        <form class="form-wrapper" method="post">
+
+            <!-- Titulo -->
+            <div class="title">
+                Criando um novo repositório
+            </div>
+
+            <!-- Formulário para o atualizar de um repositório-->
+            <div class="form-container">
+
+                <div class="textfield-label">
+                    <label>Nome</label>
+                    <input type="text" name="Repositorio.Nome" value="@Model.Repositorio.Nome" />
+                    @Html.ValidationMessageFor(modelItem => modelItem.Repositorio.Nome)
+                </div>
+
+                <div class="textfield-label">
+                    <label>Descrição</label>
+                    <textarea lo cols="40" rows="5" name="Repositorio.Descricao">@Model.Repositorio.Descricao</textarea>
+                    @Html.ValidationMessageFor(modelItem => modelItem.Repositorio.Descricao)
+                </div>
+
+                <div class="textfield-label">
+                    <label>Linguagem utilizada</label>
+                    <input type="text" name="Repositorio.Linguagem" value="@Model.Repositorio.Linguagem" />
+                    @Html.ValidationMessageFor(modelItem => modelItem.Repositorio.Linguagem)
+                </div>
+
+                <!-- O dono do repositório será pego pelo nome + sobrenome do cadastro -->
+                <div class="textfield-label">
+                    <label>Dono do repositório</label>
+                    <input disabled type="text" value="O dono será automaticamente definido como você"/>
+                </div>
+
+                <div class="textfield-label">
+                    <label>Última data de atualização</label>
+                    <input disabled type="text" value="A data será automaticamente definida como hoje" />
+                </div>
+
+                @ViewBag.Message
+
+                <div class="submit-wrapper">
+                    <button class="button-solid" type="submit">
+                        Atualizar Repositório
+                    </button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
